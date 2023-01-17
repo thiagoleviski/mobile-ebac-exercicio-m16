@@ -8,6 +8,13 @@ describe('Access forms page', () => {
 
 describe('Inserting informations', () => {
     it('should insert informations on the forms page', async () => {
-        await forms.insertInfos()       
+        await forms.insertInfos()  
+
+
+        expect(await forms.validateTitle()).toEqual('Form components')
+        expect(await forms.visibleTitle()).toBeTruthy()
+
     });
+    
 });
+

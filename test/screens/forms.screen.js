@@ -31,12 +31,24 @@ class TypeForms {
         return $('text:Active')
     }
 
+    get formsTitle(){
+        return $('text:Form components')
+    }
+
     async insertInfos(){
         this.input.click().type('Something')
         this.switch.click()
         this.dropwdown.click()
         this.list.click()
         this.button.click()
+    }
+
+    async visibleTitle(){
+        return await this.formsTitle.isDisplayed()
+    }
+
+    async validateTitle(){
+        return await this.formsTitle.getText()
     }
 }
 
